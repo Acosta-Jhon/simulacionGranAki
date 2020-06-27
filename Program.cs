@@ -59,6 +59,7 @@ namespace comprandoEnAki
             Console.WriteLine(productos);
 
             Console.ReadKey();
+            Console.ReadKey();
         }
 
     }
