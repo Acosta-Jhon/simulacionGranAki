@@ -10,39 +10,35 @@ namespace comprandoEnAki
         public string RucProveedor { get; set; }
         public string DireccionProveedor { get; set; }
 
-        Productos mascarilla = new Productos
-        {
-            Id = new Random().Next(),
-            NombreProducto = "KN-95",
-            CategoriaProducto = "Proteccion",
-            Precio = 3.5m
-        };
-
-        Productos gel = new Productos
-        {
-            Id = new Random().Next(),
-            NombreProducto = "Gel-Antibacterial",
-            CategoriaProducto = "Proteccion",
-            Precio = 3m
-        }; 
-            
         //Metodos
         public string RegistroProducto(string registro)
         {
-            if (registro == null)
+            if (registro == null) 
                 return "Gran Aki sin peticiones";
-            else
+            else 
                 return "Su registro se realizo con exito";
         }
-        public string CalcularCosto() {
-            return $"dsdas";
+    
+        public string Costo(decimal costo)
+        {
+            return $"Su costo del pedido es {costo}";
         }
-        public string Enviar (string registro) {
-            return $"dsdas";
+
+        public string Enviar(bool pago)
+        {
+            if (pago == true)
+                return $"Su productos estan siendo enviados";
+            else
+                return $"Favor de cancelar para el envio";
         }
-        public string RecirbirDevoluciones (string registro) {
-            return $"dsdas";
+        public string RecirbirDevoluciones(string devolucion,string empresa,string direccion)
+        {
+            if (devolucion != null)
+                return $"No se registran devoluciones";
+            else
+                return $"Devolucion de prodcutos de {empresa} ubicado en {direccion}";
         }
+
 
 
     }
