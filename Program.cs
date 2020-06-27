@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace comprandoEnAki
 {
@@ -31,10 +28,36 @@ namespace comprandoEnAki
                 Direccion = "Sector San Juan"
             };
 
+            Persona bodeguero = new Persona
+            {
+                Id = new Random().Next(),
+                Nombre = "Martin",
+                Cedula = "17479613213",
+                Direccion = "Sector la Ferro"
+            };
+            Productos productoUno = new Productos
+            {
+                Id = new Random().Next(),
+                NombreProducto = "Gel-Antibacterial",
+                CategoriaProducto = "17479613213",
+                Precio = 3
+            };
+
             //Consolas
             string primerCliente = cliente.Nombre;
-            string saludo = cajero.Saludar(primerCliente);
+            string saludo = cajero.Saludar(nombreSucursal,primerCliente);
             Console.WriteLine(saludo);
+
+
+            string personaApedir = bodeguero.Nombre;
+            string pidiendo = cliente.Pedir(personaApedir);
+            Console.WriteLine(pidiendo);
+            Console.WriteLine("Buenos Dias esta ubicado en Seccion A2");
+
+            string producotGelAnti = productoUno.NombreProducto;
+            string productos = cliente.Seleccionar();
+            Console.WriteLine(productos);
+
             Console.ReadKey();
         }
 

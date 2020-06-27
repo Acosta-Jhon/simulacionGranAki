@@ -80,7 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Persona.cs" />
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Proveedor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\objects\info\" />
