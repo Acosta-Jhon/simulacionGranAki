@@ -11,5 +11,6 @@ namespace comprandoEnAki
         public string CategoriaProducto { get; set; }
         public decimal Precio { get; set; }
         public Persona Comprador { get; set; }
+        public Persona Proveedor { get; set; }
     }
 }

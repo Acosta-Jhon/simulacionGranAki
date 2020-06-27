@@ -52,6 +52,7 @@ namespace comprandoEnAki
             };
 
             //Consolas
+            Console.WriteLine("*****INTERACCION -> PERSONAS - PRODUCTO - PROGRAM");
             string primerCliente = cliente.Nombre;
             string saludo = cajero.Saludar(nombreSucursal,primerCliente);
             Console.WriteLine(saludo);
@@ -72,6 +73,23 @@ namespace comprandoEnAki
             string cancelarPago = cajero.Nombre;
             string pagando = cliente.Pagar(total,primerCliente);
             Console.WriteLine(pagando);
+
+            Console.WriteLine("*****INTERACCION -> PERSONAS - PRODUCTO - PROVEEDOR");
+
+            Proveedor proveedor1 = new Proveedor
+            {
+                Id = new Random().Next(),
+                NombreProveedor = "FarmaRed",
+                RucProveedor = "1478963258001",
+                DireccionProveedor = "Quito Centro"
+            };
+
+            string distribuidor = proveedor1.NombreProveedor;
+            string peticion = $"Necesitamo 3 docenas de {gel.NombreProducto} y 3 docenas de { mascarilla.NombreProducto}";
+            Console.WriteLine(peticion);
+            string respuesta = proveedor1.RegistroProducto(peticion);
+            Console.WriteLine(respuesta);
+
 
             Console.ReadKey();
             
