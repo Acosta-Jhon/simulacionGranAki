@@ -10,17 +10,17 @@ namespace comprandoEnAki
         public string Cedula { get; set; }
         public string Direccion { get; set; }
         //Instancias
-        Productos productos;
+        Productos gel;
         public Productos GelAntibacterial
         {
             get
             {
-                return productos;
+                return gel;
             }
             set
             {
-                productos = value;
-                productos.Comprador = this;
+                gel = value;
+                gel.Comprador = this;
             }
         }
 
@@ -35,13 +35,13 @@ namespace comprandoEnAki
         }
         public string Seleccionar()
         {
-            if (productos != null)
-                return $"Necesito : {productos.NombreProducto}";
+            if (gel != null)
+                return $"Necesito : {gel.NombreProducto}";
             else
                 return "Si tengo en casa";
 
         }
     }
         
-    }
+    
 }

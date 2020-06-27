@@ -11,6 +11,6 @@ namespace comprandoEnAki
         public int DireccionProveedor { get; set; }
 
         //Metodos
-        public string registrar() { }
+        
     }
 }

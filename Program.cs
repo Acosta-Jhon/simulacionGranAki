@@ -35,11 +35,11 @@ namespace comprandoEnAki
                 Cedula = "17479613213",
                 Direccion = "Sector la Ferro"
             };
-            Productos productoUno = new Productos
+            Productos gel = new Productos
             {
                 Id = new Random().Next(),
                 NombreProducto = "Gel-Antibacterial",
-                CategoriaProducto = "17479613213",
+                CategoriaProducto = "Proteccion",
                 Precio = 3
             };
 
@@ -54,12 +54,11 @@ namespace comprandoEnAki
             Console.WriteLine(pidiendo);
             Console.WriteLine("Buenos Dias esta ubicado en Seccion A2");
 
-            string producotGelAnti = productoUno.NombreProducto;
             string productos = cliente.Seleccionar();
             Console.WriteLine(productos);
 
             Console.ReadKey();
-            Console.ReadKey();
+            
         }
 
     }
