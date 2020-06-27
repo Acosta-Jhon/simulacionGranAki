@@ -40,7 +40,15 @@ namespace comprandoEnAki
                 Id = new Random().Next(),
                 NombreProducto = "Gel-Antibacterial",
                 CategoriaProducto = "Proteccion",
-                Precio = 3
+                Precio = 3m
+            };
+
+            Productos mascarilla = new Productos
+            {
+                Id = new Random().Next(),
+                NombreProducto = "KN-95",
+                CategoriaProducto = "Proteccion",
+                Precio = 3.5m
             };
 
             //Consolas
@@ -56,6 +64,14 @@ namespace comprandoEnAki
 
             string productos = cliente.Seleccionar();
             Console.WriteLine(productos);
+
+            decimal costoUno = gel.Precio;
+            decimal costoDos = mascarilla.Precio;
+            decimal total = costoUno + costoDos;
+
+            string cancelarPago = cajero.Nombre;
+            string pagando = cliente.Pagar(total,primerCliente);
+            Console.WriteLine(pagando);
 
             Console.ReadKey();
             

@@ -9,7 +9,7 @@ namespace comprandoEnAki
         public int Id { get; set; }
         public string NombreProducto { get; set; }
         public string CategoriaProducto { get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
         public Persona Comprador { get; set; }
     }
 }

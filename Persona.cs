@@ -34,12 +34,12 @@ namespace comprandoEnAki
             return $"Discuple {nombreBodeguero} donde puedo encontrar Gel-Antibacterial";
         }
         public string Seleccionar()
+        { 
+            return $"Tambien necesito una mascarilla";
+        }
+        public string Pagar(decimal costoTotal,string nombreCliente) 
         {
-            if (gel != null)
-                return $"Necesito : {gel.NombreProducto}";
-            else
-                return "Si tengo en casa";
-
+            return $"{nombreCliente} su monto a pagar es {costoTotal}";
         }
     }
         
