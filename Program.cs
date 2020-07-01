@@ -74,38 +74,7 @@ namespace comprandoEnAki
             string pagando = cliente.Pagar(total,primerCliente);
             Console.WriteLine(pagando);
 
-            Console.WriteLine("*****INTERACCION -> PERSONAS - PRODUCTO - PROVEEDOR");
-
-            Proveedor proveedor1 = new Proveedor
-            {
-                Id = new Random().Next(),
-                NombreProveedor = "FarmaRed",
-                RucProveedor = "1478963258001",
-                DireccionProveedor = "Quito Centro"
-            };
-
-            string distribuidor = proveedor1.NombreProveedor;
-            string peticion = $"Necesitamo 3 docenas de {gel.NombreProducto} y 3 docenas de { mascarilla.NombreProducto}";
-            Console.WriteLine(peticion);
-
-            string respuesta = proveedor1.RegistroProducto(peticion);
-            Console.WriteLine(respuesta);
-
-             decimal docenaGel = 15m;
-             decimal docenaMascarillas = 10m;
-             decimal suma = docenaGel + docenaMascarillas;
-
-            string respuestaPedido = proveedor1.Costo(suma);
-            Console.WriteLine(respuestaPedido);
-
-            bool pagado = true;
-
-            string envio = proveedor1.Enviar(pagado);
-            Console.WriteLine(envio);
-
-            string devoluciones = proveedor1.RecirbirDevoluciones("0",nombreSucursal,direccionSucursal);
-            Console.WriteLine(devoluciones);
-            Console.WriteLine(cliente.Id);
+            
             Console.ReadKey();
 
             

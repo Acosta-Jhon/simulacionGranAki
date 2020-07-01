@@ -5,8 +5,8 @@ namespace comprandoEnAki
     class Persona : GeneradorAutomaticoIdentificacion
     {
         //Propiedades
-        public string Nombre { get; set; }
         public string Cedula { get; set; }
+        public string Nombre { get; set; }
         public string Direccion { get; set; }
         //Instancias
         Productos gel;
