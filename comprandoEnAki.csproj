@@ -79,6 +79,7 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneradorAutomaticoIdentificacion.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />

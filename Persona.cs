@@ -2,10 +2,9 @@
 
 namespace comprandoEnAki
 {
-    class Persona
+    class Persona : GeneradorAutomaticoIdentificacion
     {
         //Propiedades
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }
         public string Direccion { get; set; }

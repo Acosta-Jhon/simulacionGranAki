@@ -105,7 +105,9 @@ namespace comprandoEnAki
 
             string devoluciones = proveedor1.RecirbirDevoluciones("0",nombreSucursal,direccionSucursal);
             Console.WriteLine(devoluciones);
+            Console.WriteLine(cliente.Id);
             Console.ReadKey();
+
             
         }
 
