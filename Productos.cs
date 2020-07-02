@@ -1,16 +1,14 @@
-﻿using System;
-
-
-namespace comprandoEnAki
+﻿namespace comprandoEnAki
 {
-    class Productos
+    class Productos :GeneradorAutomaticoIdentificacion
     {
+        //Herencia
+        public Productos():base(){}
+
         //Propiedades
-        public int Id { get; set; }
         public string NombreProducto { get; set; }
         public string CategoriaProducto { get; set; }
-        public decimal Precio { get; set; }
+        public decimal PrecioProducto { get; set; }
         public Persona Comprador { get; set; }
-        public Persona Proveedor { get; set; }
     }
 }

@@ -6,57 +6,57 @@ namespace comprandoEnAki
     {
         static void Main(string[] args)
         {
-            Random codigoLocal = new Random();
-            int id = codigoLocal.Next();
-            string nombreSucursal = "Gran Aki";
-            string direccionSucursal = "Av. Colon ";
 
-            //Instancias
+            //Instancias Estableciento
+            EstablecimientoGranAki Establecimiento = new EstablecimientoGranAki("Aki","Gran","0987654123", "Av. 10 de Agosto N16-73 ");
+
+            //Instancias Persona
             Persona cajero = new Persona
             {
-                Id = new Random().Next(),
-                Nombre = "Cristal",
                 Cedula = "1789456123",
-                Direccion = "Sector la Comunda"
+                Nombre = "Cristal",
+                Direccion = "Sector la Comunda",
+                Correo = "crial@gamil.com"
             };
 
             Persona cliente = new Persona
             {
-                Id = new Random().Next(),
-                Nombre = "Jhon",
                 Cedula = "17445698725",
-                Direccion = "Sector San Juan"
+                Nombre = "Jhon",
+                Direccion = "Sector San Juan",
+                Correo = "jhon@gmail.com"
             };
 
             Persona bodeguero = new Persona
             {
-                Id = new Random().Next(),
-                Nombre = "Martin",
                 Cedula = "17479613213",
-                Direccion = "Sector la Ferro"
+                Nombre = "Martin",
+                Direccion = "Sector la Ferro",
+                Correo = "martin@gmail.com"
             };
+
+            //Instancias Productos
             Productos gel = new Productos
             {
-                Id = new Random().Next(),
                 NombreProducto = "Gel-Antibacterial",
                 CategoriaProducto = "Proteccion",
-                Precio = 3m
+                PrecioProducto = 3m
             };
 
             Productos mascarilla = new Productos
             {
-                Id = new Random().Next(),
                 NombreProducto = "KN-95",
                 CategoriaProducto = "Proteccion",
-                Precio = 3.5m
+                PrecioProducto = 3.5m
             };
 
             //Consolas
-            Console.WriteLine("*****INTERACCION -> PERSONAS - PRODUCTO - PROGRAM");
             string primerCliente = cliente.Nombre;
-            string saludo = cajero.Saludar(nombreSucursal,primerCliente);
-            Console.WriteLine(saludo);
-
+            string establecimientoNombre = Establecimiento.Nombre;
+            string establecimientoTipo = Establecimiento.Tipo;
+            string estableciento = $"{establecimientoTipo} {establecimientoNombre} ";
+            string saludar = bodeguero.Saludar(estableciento,primerCliente);
+            Console.WriteLine(saludar);
 
             string personaApedir = bodeguero.Nombre;
             string pidiendo = cliente.Pedir(personaApedir);
@@ -66,8 +66,8 @@ namespace comprandoEnAki
             string productos = cliente.Seleccionar();
             Console.WriteLine(productos);
 
-            decimal costoUno = gel.Precio;
-            decimal costoDos = mascarilla.Precio;
+            decimal costoUno = gel.PrecioProducto;
+            decimal costoDos = mascarilla.PrecioProducto;
             decimal total = costoUno + costoDos;
 
             string cancelarPago = cajero.Nombre;
