@@ -15,7 +15,7 @@ namespace comprandoEnAki
         public String Nombre { get; set; }
         public String Tipo { get; set; }
         public String Telefono { get; set; }
-        public String Direccion { get; set; }        
+        public String Direccion { get; set; }
 
     }
 }

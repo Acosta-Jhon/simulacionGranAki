@@ -10,19 +10,7 @@ namespace comprandoEnAki
         public string Direccion { get; set; }
         public string Correo { get; set; }
         //Instancias
-        Productos gel;
-        public Productos GelAntibacterial
-        {
-            get
-            {
-                return gel;
-            }
-            set
-            {
-                gel = value;
-                gel.Comprador = this;
-            }
-        }
+
         private Moto moto;
         public Moto Moto
         {
@@ -45,7 +33,7 @@ namespace comprandoEnAki
         }
         public string Pedir (string nombreBodeguero)
         {
-            return $"Discuple {nombreBodeguero} donde puedo encontrar Gel-Antibacterial";
+            return $"Discuple {nombreBodeguero} ";
         }
         public string Seleccionar()
         { 
