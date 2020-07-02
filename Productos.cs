@@ -3,7 +3,7 @@
     class Productos :GeneradorAutomaticoIdentificacion
     {
         //Herencia
-        public Productos():base(){}
+        public Productos() : base() {}
 
         //Propiedades
         public string NombreProducto { get; set; }

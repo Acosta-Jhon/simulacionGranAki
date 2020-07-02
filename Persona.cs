@@ -23,8 +23,22 @@ namespace comprandoEnAki
                 gel.Comprador = this;
             }
         }
+        private Moto moto;
+        public Moto Moto
+        {
+            get 
+            {
+                return moto; 
+            }
+            set
+            {
+                moto = value;
+                moto.Comprador = this;
+            }
+        }
 
         //Metodos
+
         public string Saludar(string nombreSucursal,string nombre)
         {
             return $"Bienvenido {nombre} a {nombreSucursal} mi nombre es {this.Nombre}";
@@ -40,6 +54,10 @@ namespace comprandoEnAki
         public string Pagar(decimal costoTotal,string nombreCliente) 
         {
             return $"{nombreCliente} su monto a pagar es {costoTotal}";
+        }
+        public string IndicarCelular()
+        {
+            return $"Tengo un {Moto.ModeloMoto} y su id es {Moto.Id}";
         }
     }
         

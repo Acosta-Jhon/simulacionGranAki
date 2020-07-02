@@ -79,8 +79,9 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CocaCola.cs" />
+    <Compile Include="Moto.cs" />
     <Compile Include="SeccionBebidas.cs" />
-    <Compile Include="SeccionCarnes.cs" />
     <Compile Include="SeccionElectrodomesticos.cs" />
     <Compile Include="EstablecimientoGranAki.cs" />
     <Compile Include="GeneradorAutomaticoIdentificacion.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SeccionRopa.cs" />
+    <Compile Include="Sudadera.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\objects\info\" />

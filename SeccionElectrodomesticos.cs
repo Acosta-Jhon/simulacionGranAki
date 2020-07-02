@@ -1,13 +1,23 @@
-﻿namespace comprandoEnAki
+﻿using System;
+
+namespace comprandoEnAki
 {
     class SeccionElectrodomesticos : Productos
     {
         //Herencia
         public SeccionElectrodomesticos():base(){}
         //Propiedades
-        public string ModeloElectrodomesticos { get; set; }
-        public string MaterialElectrodomestico { get; set; }
-        public string ConectividadElectromesticos { get; set; }
-        public string CapacidadElectrodomesticos { get; set; }
+        public string NombreSeccion { get; set; }
+        public string PisoSeccion{ get; set; }
+        public int CapacidadSeccion { get; set; }
+
+        //Metodos
+        public string Encendido() {
+            return $"Encendida";
+        }
+        public string Apagado()
+        {
+            return $"El equipo esta Apagado";
+        }
     }
 }

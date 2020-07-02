@@ -35,19 +35,19 @@ namespace comprandoEnAki
                 Correo = "martin@gmail.com"
             };
 
-            //Instancias Productos
-            Productos gel = new Productos
+            //Instancias Secciones
+            SeccionElectrodomesticos electrodomesticos = new SeccionElectrodomesticos
             {
-                NombreProducto = "Gel-Antibacterial",
-                CategoriaProducto = "Proteccion",
-                PrecioProducto = 3m
+                NombreSeccion = "D",
+                PisoSeccion = "2",
+                CapacidadSeccion = 50
             };
-
-            Productos mascarilla = new Productos
+            Moto moto = new Moto()
             {
-                NombreProducto = "KN-95",
-                CategoriaProducto = "Proteccion",
-                PrecioProducto = 3.5m
+                NombreProducto = "Yamaha",
+                PrecioProducto = 3500,
+                CategoriaProducto = "Motocicleta",
+                ModeloMoto = "YH-2020"
             };
 
             //Consolas
@@ -61,23 +61,13 @@ namespace comprandoEnAki
             string personaApedir = bodeguero.Nombre;
             string pidiendo = cliente.Pedir(personaApedir);
             Console.WriteLine(pidiendo);
-            Console.WriteLine("Buenos Dias esta ubicado en Seccion A2");
+            Console.WriteLine($"Buenos Dias esta ubicado en el PISO {electrodomesticos.PisoSeccion} Seccion {electrodomesticos.NombreSeccion}");
 
-            string productos = cliente.Seleccionar();
-            Console.WriteLine(productos);
+            Console.WriteLine(moto.EncenderMoto());
 
-            decimal costoUno = gel.PrecioProducto;
-            decimal costoDos = mascarilla.PrecioProducto;
-            decimal total = costoUno + costoDos;
-
-            string cancelarPago = cajero.Nombre;
-            string pagando = cliente.Pagar(total,primerCliente);
-            Console.WriteLine(pagando);
-
-            
             Console.ReadKey();
 
-            
+
         }
 
     }
