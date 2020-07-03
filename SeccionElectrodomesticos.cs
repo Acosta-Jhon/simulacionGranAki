@@ -8,6 +8,7 @@ namespace comprandoEnAki
         public SeccionElectrodomesticos():base(){}
         //Propiedades
         public string NombreSeccion { get; set; }
+        public string PasilloSeccion { get; set; }
         public string PisoSeccion{ get; set; }
         public int CapacidadSeccion { get; set; }
 
@@ -17,7 +18,7 @@ namespace comprandoEnAki
         }
         public string Apagado()
         {
-            return $"El equipo esta Apagado";
+            return $"Apagado";
         }
     }
 }

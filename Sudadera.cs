@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace comprandoEnAki
+﻿namespace comprandoEnAki
 {
-    class Sudadera
+    class Sudadera:Productos
     {
+        public string ModeloSudadera { get; set; }
+        public string TelaSudadera { get; set; }
+
+        public Sudadera():base()
+        {
+            
+        }
     }
 }

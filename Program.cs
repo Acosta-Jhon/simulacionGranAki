@@ -38,7 +38,8 @@ namespace comprandoEnAki
             //Instancias Secciones
             SeccionElectrodomesticos electrodomesticos = new SeccionElectrodomesticos
             {
-                NombreSeccion = "D",
+                NombreSeccion = "Electrodomésticos",
+                PasilloSeccion = "D",
                 PisoSeccion = "2",
                 CapacidadSeccion = 50
             };
@@ -48,6 +49,23 @@ namespace comprandoEnAki
                 PrecioProducto = 3500,
                 CategoriaProducto = "Motocicleta",
                 ModeloMoto = "YH-2020"
+            };
+            Sudadera sudadera = new Sudadera()
+            {
+                NombreProducto = "Sport Adidas",
+                CategoriaProducto = "Sudaderas",
+                ModeloSudadera = "Adidas-V20",
+                TelaSudadera = "Lana ",
+                PrecioProducto = 60,
+
+            };
+            CocaCola cocaBebida = new CocaCola()
+            {
+                NombreProducto = "CocaCola",
+                CategoriaProducto = "Gaseosa",
+                LitrosBebida = "1LT",
+                EnvaseBebida = "Plastico",
+                TipoBebida = "Lite"
             };
 
             //Consolas
@@ -59,11 +77,19 @@ namespace comprandoEnAki
             Console.WriteLine(saludar);
 
             string personaApedir = bodeguero.Nombre;
-            string pidiendo = cliente.Pedir(personaApedir);
+            string pidiendo = cliente.Pedir(personaApedir,electrodomesticos.NombreSeccion);
             Console.WriteLine(pidiendo);
             Console.WriteLine($"Buenos Dias esta ubicado en el PISO {electrodomesticos.PisoSeccion} Seccion {electrodomesticos.NombreSeccion}");
 
-            Console.WriteLine(moto.EncenderMoto());
+            string motoOn = moto.EncenderMoto();
+            Console.WriteLine($"{cliente.Nombre} {motoOn}");
+            Console.WriteLine(moto.Acelerar());
+            Console.WriteLine(moto.Desacelerar());
+            Console.WriteLine(moto.Apagado());
+
+
+            Console.WriteLine($"{cliente.IndicarProducto(sudadera.NombreProducto,sudadera.PrecioProducto)}");
+            Console.WriteLine(cliente.Beber(cocaBebida.NombreProducto,cocaBebida.TipoBebida));
 
             Console.ReadKey();
 

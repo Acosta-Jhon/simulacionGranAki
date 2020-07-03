@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace comprandoEnAki
+﻿namespace comprandoEnAki
 {
     class Persona : GeneradorAutomaticoIdentificacion
     {
@@ -24,28 +22,57 @@ namespace comprandoEnAki
                 moto.Comprador = this;
             }
         }
+        private Sudadera sudadera;
+        public Sudadera Sudadera { 
+            get 
+            {
+                return sudadera;
+                    }
+            set 
+            {
+                sudadera = value;
+                sudadera.Comprador = this;
+            }
+        }
+        private CocaCola cocaCola;
+        public CocaCola CocaCola
+        {
+            get
+            {
+                return cocaCola;
+            }
+            set
+            {
+                cocaCola = value;
+                cocaCola.Comprador = this;
+            }
+        }
 
         //Metodos
 
         public string Saludar(string nombreSucursal,string nombre)
         {
-            return $"Bienvenido {nombre} a {nombreSucursal} mi nombre es {this.Nombre}";
+            return $"Bienvenido {nombre} a {nombreSucursal} mi nombre es {Nombre}";
         }
-        public string Pedir (string nombreBodeguero)
+        public string Pedir (string nombreBodeguero,string seccionSolicitada)
         {
-            return $"Discuple {nombreBodeguero} ";
-        }
-        public string Seleccionar()
-        { 
-            return $"Tambien necesito una mascarilla";
+            return $"Discuple {nombreBodeguero} la seccion de {seccionSolicitada} ";
         }
         public string Pagar(decimal costoTotal,string nombreCliente) 
         {
             return $"{nombreCliente} su monto a pagar es {costoTotal}";
         }
-        public string IndicarCelular()
+        public string IndicarProducto(string nombre,decimal precio)
         {
-            return $"Tengo un {Moto.ModeloMoto} y su id es {Moto.Id}";
+            return $"Tengo una {nombre} y me costo {precio}";
+        }
+        public string Beber(string bebida,string tipo)
+        {
+            return $"Esta {bebida} {tipo} esta refrescante";
+        }
+        public string Seleccionar()
+        {
+            return $"Tambien necesito una mascarilla";
         }
     }
         

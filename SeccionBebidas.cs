@@ -1,6 +1,6 @@
 ﻿namespace comprandoEnAki
 {
-    class SeccionBebidas : GeneradorAutomaticoIdentificacion
+    class SeccionBebidas : Productos
     {
         //Herencia
         public SeccionBebidas():base(){}

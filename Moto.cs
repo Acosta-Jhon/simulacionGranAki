@@ -16,5 +16,19 @@
         {
             return $"{NombreProducto} {ModeloMoto} ya esta {base.Encendido()}";
         }
+        public string ApagarMoto()
+        {
+            return $"la {NombreProducto} ya esta {base.Apagado()}";
+        }
+        public string Acelerar()
+        {
+            return "Acelerando";
+        }
+
+        public string Desacelerar()
+        {
+            return "Frenando";
+        }
+
     }
 }
