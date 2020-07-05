@@ -117,7 +117,7 @@ namespace comprandoEnAki
             Console.WriteLine("Su precio a pagar es : {0}",totalPrecios);
 
             Console.WriteLine("-------------------PAGO-----------------------------");
-            Console.WriteLine("Ingrese un monto SUPERIOR al precio pagar : ...");
+            Console.WriteLine("=> Ingrese un monto SUPERIOR al precio por pagar : ...");
            
             
             var ingresarMonto = Convert.ToDecimal(Console.ReadLine());
@@ -131,7 +131,6 @@ namespace comprandoEnAki
                 var clientePaga = cliente.Pagar(ingresarMonto,totalPrecios);
                 Console.WriteLine(clientePaga);
             }
-            
             
             Console.ReadKey();
         }
