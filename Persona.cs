@@ -1,4 +1,7 @@
-﻿namespace comprandoEnAki
+﻿using System;
+using System.Reflection;
+
+namespace comprandoEnAki
 {
     class Persona : GeneradorAutomaticoIdentificacion
     {
@@ -58,10 +61,6 @@
         {
             return $"Discuple {nombreBodeguero} la seccion de {seccionSolicitada} ";
         }
-        public string Pagar(decimal costoTotal,string nombreCliente) 
-        {
-            return $"{nombreCliente} su monto a pagar es {costoTotal}";
-        }
         public string IndicarProducto(string nombre,decimal precio)
         {
             return $"Tengo una {nombre} y me costo {precio}";
@@ -70,10 +69,13 @@
         {
             return $"Esta {bebida} {tipo} esta refrescante";
         }
-        public string Seleccionar()
+        public string Pagar(decimal dinero,decimal valorCancelar) 
         {
-            return $"Tambien necesito una mascarilla";
+            var resta = dinero - valorCancelar;       
+            
+            return $"Pago Exitoso - Su cambio es : {resta}";
         }
+
     }
         
     

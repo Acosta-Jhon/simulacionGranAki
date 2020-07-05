@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace comprandoEnAki
 {
@@ -65,7 +67,8 @@ namespace comprandoEnAki
                 CategoriaProducto = "Gaseosa",
                 LitrosBebida = "1LT",
                 EnvaseBebida = "Plastico",
-                TipoBebida = "Lite"
+                TipoBebida = "Lite",
+                PrecioProducto = 2.5m
             };
 
             //Consolas
@@ -91,10 +94,47 @@ namespace comprandoEnAki
             Console.WriteLine($"{cliente.IndicarProducto(sudadera.NombreProducto,sudadera.PrecioProducto)}");
             Console.WriteLine(cliente.Beber(cocaBebida.NombreProducto,cocaBebida.TipoBebida));
 
+            Console.WriteLine("----------------PROCEDIMIENTO EN CAJA---------------");
+
+            //Canasta
+            var canastaPrecios = new [] {sudadera.PrecioProducto,cocaBebida.PrecioProducto,moto.PrecioProducto};
+            var canastaNombre = new [] {sudadera.NombreProducto,cocaBebida.NombreProducto,moto.NombreProducto};
+
+            int i;
+            decimal totalPrecios = 0;
+            for(i=0; i<canastaPrecios.Length; i++){
+
+                Console.WriteLine("El precio de {0} es : {1}",canastaNombre[i],canastaPrecios[i]);
+            }
+
+            Console.WriteLine("-----------PRECIO TOTAL-----------------------------");
+
+            for(i=0; i<canastaPrecios.Length; i++){
+
+                totalPrecios = totalPrecios + canastaPrecios[i];
+                
+            }
+            Console.WriteLine("Su precio a pagar es : {0}",totalPrecios);
+
+            Console.WriteLine("-------------------PAGO-----------------------------");
+            Console.WriteLine("Ingrese un monto SUPERIOR al precio pagar : ...");
+           
+            
+            var ingresarMonto = Convert.ToDecimal(Console.ReadLine());
+            
+            if(ingresarMonto < totalPrecios){
+                Console.Write("Dinero Insufiente\nError: Su compra fue cancelada ");
+
+            }
+            else
+            {
+                var clientePaga = cliente.Pagar(ingresarMonto,totalPrecios);
+                Console.WriteLine(clientePaga);
+            }
+            
+            
             Console.ReadKey();
-
-
         }
-
     }
 }
+
