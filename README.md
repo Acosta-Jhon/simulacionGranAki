@@ -1,1 +1,1 @@
-# Compra,venta y distribucion de productos en Gran Aki. 
+# Interacciones entre clases asi como :compra,pagos,prueba de objetos. 
